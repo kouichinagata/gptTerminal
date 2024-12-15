@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-green-500;
+  }
+}
+
+@layer components {
+  .terminal-window {
+    @apply min-h-screen bg-black text-green-500;
+  }
+
+  .terminal-header {
+    @apply border-b border-green-500/20 mb-4;
+  }
+
+  .terminal-input {
+    @apply w-full bg-black text-green-500 border-none focus:ring-0 focus:outline-none placeholder-green-500/30;
+  }
+
+  .terminal-message {
+    @apply py-2 text-green-500;
+  }
+
+  .terminal-typing {
+    @apply text-green-500/70 animate-pulse;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/95 backdrop-blur-sm;
+  }
+
+  .modal-content {
+    @apply bg-black border border-green-500/20 rounded-none p-6 max-w-2xl w-full mx-auto;
+  }
+}
+
+/* Custom scrollbar for terminal feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green-500/20 hover:bg-green-500/30;
+}
